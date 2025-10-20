@@ -72,7 +72,7 @@ Agric-SoilHealth-AI/
 
 ## How to Run Locally
 
-### 1️⃣ Clone the Repository
+1️⃣ Clone the Repository
 ```
 git clone https://github.com/<yourusername>/Agric-SoilHealth-AI.git
 cd Agric-SoilHealth-AI
@@ -104,7 +104,7 @@ Visit http://localhost:8000/docs
 ```
 streamlit run dashboard.py
 ```
-🖼 Screenshots
+### Screenshots
 FastAPI Endpoint
 
 Alert Dashboard
