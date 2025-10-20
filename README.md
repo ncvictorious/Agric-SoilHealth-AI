@@ -1,4 +1,15 @@
+<p align="center">
+  <img src="./screenshots/alert_dashboard.png" alt="Healthy Soils Dashboard" width="90%">
+</p>
 
+# AI-Driven Decision Support for Soil Health and Nutrient Management
+
+[![Python](https://img.shields.io/badge/Python-3.11-blue)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-brightgreen)](https://fastapi.tiangolo.com/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.38-ff4b4b)](https://streamlit.io/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5-orange)](https://scikit-learn.org/)
+[![Last Commit](https://img.shields.io/github/last-commit/ncvictorious/Agric-SoilHealth-AI)](https://github.com/ncvictorious/Agric-SoilHealth-AI/commits/main)
+[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](./LICENSE)
 
 # AI-Driven Decision Support for Soil Health and Nutrient Management
 
@@ -104,12 +115,20 @@ Visit http://localhost:8000/docs
 ```
 streamlit run dashboard.py
 ```
-### Screenshots
-FastAPI Endpoint
+## Screenshots
+**FastAPI Interface – `/docs`**
+<img src="./screenshots/fast_api1.png" alt="FastAPI docs home" width="90%">
 
-Alert Dashboard
+**FastAPI Endpoint – `/score` Request**
+<img src="./screenshots/fast_api2.png" alt="FastAPI POST endpoint" width="90%">
 
-### Technical Stack
+**Model Response – Alert Card Output**
+<img src="./screenshots/fast_api3.png" alt="FastAPI JSON response" width="90%">
+
+**Healthy Soils Dashboard – Streamlit View**
+<img src="./screenshots/alert_dashboard.png" alt="Healthy Soils Dashboard" width="90%">
+
+## Technical Stack
 ```
 Python 3.11
 
@@ -123,15 +142,18 @@ Pandas 2.2
 
 Uvicorn 0.30
 ```
-### Documentation
+## Documentation
 
-Feasibility Note – Project summary and results
+| Document | Description |
+|-----------|-------------|
+| [📄 Feasibility Note (PDF)](./docs/Feasibility%20Note.pdf) | Summarises objectives, deliverables, and findings |
+| [📘 Technical Overview (PDF)](./docs/Technical%20Overview%20%E2%80%93%20System%20Architecture.pdf) | Explains pipeline design, architecture, and next steps |
 
-Technical Overview – Architecture, environment, and model explanation
 
-### Contact
+## Contact
 
-Author: Victor Nwaobi
-Organisation: Edora AI-Robotics Solutions Ltd
+### Author: Victor Nwaobi
+
+### Organisation: Edora AI-Robotics Solutions Ltd
 
 
