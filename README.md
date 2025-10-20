@@ -9,7 +9,7 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.38-ff4b4b)](https://streamlit.io/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5-orange)](https://scikit-learn.org/)
 [![Last Commit](https://img.shields.io/github/last-commit/ncvictorious/Agric-SoilHealth-AI)](https://github.com/ncvictorious/Agric-SoilHealth-AI/commits/main)
-[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](./LICENSE)
+![Proprietary](https://img.shields.io/badge/License-Proprietary-red)
 
 # AI-Driven Decision Support for Soil Health and Nutrient Management
 
@@ -172,5 +172,20 @@ Retrain model for field variability and bias correction
 Align with DEFRA Digital Regulation Hub guidelines
 
 Conduct user testing with partner farms
+
+
+---
+
+## ⚠️ Intellectual Property Notice
+
+© 2025 Edora AI-Robotics Solutions Ltd and Victor Nwaobi.  
+All rights reserved.
+
+This repository and its contents are provided for demonstration and feasibility-review purposes only.  
+No part of this code, data, or documentation may be reproduced, reused, modified, or distributed  
+without explicit written permission from the authors or project leads.  
+
+> For partnership, research, or funding enquiries, please contact  
+> **Edora AI-Robotics Solutions Ltd** or **Victor Nwaobi** via GitHub [@ncvictorious](https://github.com/ncvictorious).
 
 
