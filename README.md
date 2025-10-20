@@ -7,7 +7,7 @@ It demonstrates an **AI-driven pipeline** that predicts soil nutrient risks, vis
 
 ---
 
-## 📊 Project Overview
+## Project Overview
 This project integrates **synthetic environmental datasets**, **machine learning models**, and **interactive dashboards** to assess soil health in near real-time.
 
 ### 🎯 Objectives
@@ -18,7 +18,7 @@ This project integrates **synthetic environmental datasets**, **machine learning
 
 ---
 
-## 🧩 System Architecture
+## System Architecture
 
 
 DATA → MODEL → API → DASHBOARD
@@ -33,7 +33,7 @@ DATA → MODEL → API → DASHBOARD
 
 ---
 
-## 🧠 Model Performance (Synthetic Dataset)
+## Model Performance (Synthetic Dataset)
 
 | Metric | Result |
 |---------|--------|
@@ -45,8 +45,8 @@ These indicate strong predictive potential and a stable synthetic training envir
 
 ---
 
-## ⚙️ Project Structure
-
+## Project Structure
+```
 
 Agric-SoilHealth-AI/
 │
@@ -66,46 +66,51 @@ Agric-SoilHealth-AI/
 │
 ├── Feasibility_Note_AI_Soil_Health.pdf
 └── Technical_Overview.pdf
-
+```
 
 ---
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 ### 1️⃣ Clone the Repository
-```bash
+```
 git clone https://github.com/<yourusername>/Agric-SoilHealth-AI.git
 cd Agric-SoilHealth-AI
-
+```
 
 2️⃣ Create a Virtual Environment
+```
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
-
+```
 3️⃣ Generate Data
+```
 python generate_data.py
-
+```
 4️⃣ Train the Model
+```
 python train_model.py
-
+```
 5️⃣ Run API
+```
 uvicorn serve_api:app --reload --port 8000
-
+```
 
 Visit http://localhost:8000/docs
  to interact with the endpoint.
 
-6️⃣ Launch Dashboard
+6️ Launch Dashboard
+```
 streamlit run dashboard.py
-
+```
 🖼 Screenshots
 FastAPI Endpoint
 
 Alert Dashboard
 
-🔬 Technical Stack
-
+### Technical Stack
+```
 Python 3.11
 
 scikit-learn 1.5
@@ -117,14 +122,14 @@ Streamlit 1.38
 Pandas 2.2
 
 Uvicorn 0.30
-
-📘 Documentation
+```
+### Documentation
 
 Feasibility Note – Project summary and results
 
 Technical Overview – Architecture, environment, and model explanation
 
-📧 Contact
+### Contact
 
 Author: Victor Nwaobi
 Organisation: Edora AI-Robotics Solutions Ltd
