@@ -146,8 +146,9 @@ Uvicorn 0.30
 
 | Document | Description |
 |-----------|-------------|
-| [📄 Feasibility Note (PDF)](./docs/Feasibility%20Note.pdf) | Summarises objectives, deliverables, and findings |
-| [📘 Technical Overview (PDF)](./docs/Technical%20Overview%20%E2%80%93%20System%20Architecture.pdf) | Explains pipeline design, architecture, and next steps |
+| [📄 Feasibility Note (PDF)](./docs/Feasibility_Note.pdf) | Summarises objectives, deliverables, and findings |
+| [📘 Technical Overview (PDF)](./docs/Technical_Overview_System_Architecture.pdf) | Explains pipeline design, architecture, and next steps |
+
 
 
 ## Contact
