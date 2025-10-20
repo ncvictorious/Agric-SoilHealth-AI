@@ -1,3 +1,34 @@
+# 🌱 AI-Driven Decision Support for Soil Health & Nutrient Management
+
+[![Python](https://img.shields.io/badge/Python-3.11-blue)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-brightgreen)](https://fastapi.tiangolo.com/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.38-ff4b4b)](https://streamlit.io/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5-orange)](https://scikit-learn.org/)
+[![Last Commit](https://img.shields.io/github/last-commit/ncvictorious/Agric-SoilHealth-AI)](https://github.com/ncvictorious/Agric-SoilHealth-AI/commits/main)
+[![Repo Size](https://img.shields.io/github/repo-size/ncvictorious/Agric-SoilHealth-AI)](https://github.com/ncvictorious/Agric-SoilHealth-AI)
+[![License: MIT](https://img.shields.io/badge/License-MIT-informational)](#-license)
+
+> Feasibility prototype for DEFRA: synthetic dataset → ML model → API → dashboard with explainable Alert Cards.
+
+---
+
+## 🔎 Quick look
+
+**KPI Badges (synthetic data):**  
+![AUC](https://img.shields.io/badge/AUC-0.998-brightgreen)
+![Accuracy](https://img.shields.io/badge/Accuracy-0.995-brightgreen)
+![F1](https://img.shields.io/badge/F1-0.667-yellow)
+
+**Architecture (Mermaid):**
+```mermaid
+graph LR
+  A[Data<br/>CSV/GeoJSON] --> B[Feature Engineering]
+  B --> C[Model<br/>HGB Classifier]
+  C --> D[FastAPI /score]
+  D --> E[Streamlit Dashboard]
+  C --> F[(Outputs<br/>metrics.json,<br/>feature_importance.png)]
+
+
 # 🌱 AI-Driven Decision Support for Soil Health and Nutrient Management
 
 This repository contains the feasibility prototype developed for the **DEFRA Agriculture & Soil Health Project** (Edora AI-Robotics Solutions Ltd, 2025).  
@@ -21,31 +52,31 @@ This project integrates **synthetic environmental datasets**, **machine learning
 
 DATA → MODEL → API → DASHBOARD
 
-
+`
 | Layer | Description |
 |-------|--------------|
 | **Data Layer** | Synthetic datasets generated (soil, rainfall, NDVI, fertiliser, etc.) |
 | **Model Layer** | Histogram-Based Gradient Boosting Classifier (scikit-learn) trained on engineered features |
 | **API Layer** | FastAPI REST API (`/score`) serving Alert Cards with risk explanations |
 | **Dashboard Layer** | Streamlit interface showing per-field risk indicators (Green / Amber / Red) |
-
+`
 ---
 
 ## 🧠 Model Performance (Synthetic Dataset)
-
+`
 | Metric | Result |
 |---------|--------|
 | **AUC** | 0.998 |
 | **Accuracy** | 0.995 |
 | **Precision / Recall / F1** | 0.667 / 0.667 / 0.667 |
-
+`
 These indicate strong predictive potential and a stable synthetic training environment.
 
 ---
 
 ## ⚙️ Project Structure
 
-
+`
 Agric-SoilHealth-AI/
 │
 ├── data/ # Synthetic dataset package
@@ -64,7 +95,7 @@ Agric-SoilHealth-AI/
 │
 ├── Feasibility_Note_AI_Soil_Health.pdf
 └── Technical_Overview.pdf
-
+`
 
 ---
 
@@ -74,29 +105,34 @@ Agric-SoilHealth-AI/
 ```bash
 git clone https://github.com/<yourusername>/Agric-SoilHealth-AI.git
 cd Agric-SoilHealth-AI
-
+`
 
 2️⃣ Create a Virtual Environment
+`
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
-
+`
 3️⃣ Generate Data
+`
 python generate_data.py
-
+`
 4️⃣ Train the Model
+`
 python train_model.py
-
+`
 5️⃣ Run API
+`
 uvicorn serve_api:app --reload --port 8000
-
+`
 
 Visit http://localhost:8000/docs
  to interact with the endpoint.
 
 6️⃣ Launch Dashboard
+`
 streamlit run dashboard.py
-
+`
 🖼 Screenshots
 FastAPI Endpoint
 
@@ -118,9 +154,10 @@ Uvicorn 0.30
 
 📘 Documentation
 
-Feasibility Note – Project summary and results
+## 📘 Documentation
+- 📄 [Feasibility Note (PDF)](./docs/Feasibility%20Note.pdf)
+- 📘 [Technical Overview (PDF)](./docs/Technical%20Overview%20–%20System%20Architecture.pdf)
 
-Technical Overview – Architecture, environment, and model explanation
 
 📧 Contact
 
