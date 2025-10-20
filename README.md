@@ -27,141 +27,97 @@ graph LR
   C --> D[FastAPI /score]
   D --> E[Streamlit Dashboard]
   C --> F[(Outputs<br/>metrics.json,<br/>feature_importance.png)]
+🌱 Project summary
+This repository contains the feasibility prototype developed for the DEFRA Agriculture & Soil Health Project (Edora AI-Robotics Solutions Ltd, 2025).
+It demonstrates an AI-driven pipeline that predicts soil nutrient risks, visualises compliance alerts, and provides interpretable insights for farmers and regulators.
 
+🎯 Objectives
+Generate a realistic synthetic dataset simulating UK agricultural soil and weather conditions.
 
-# 🌱 AI-Driven Decision Support for Soil Health and Nutrient Management
+Train and validate a baseline ML model to predict nitrate/runoff risks.
 
-This repository contains the feasibility prototype developed for the **DEFRA Agriculture & Soil Health Project** (Edora AI-Robotics Solutions Ltd, 2025).  
-It demonstrates an **AI-driven pipeline** that predicts soil nutrient risks, visualises compliance alerts, and provides interpretable insights for farmers and regulators.
+Build a FastAPI service exposing prediction endpoints.
 
----
+Develop a Streamlit dashboard for visualising alerts and soil compliance insights.
 
-## 📊 Project Overview
-This project integrates **synthetic environmental datasets**, **machine learning models**, and **interactive dashboards** to assess soil health in near real-time.
-
-### 🎯 Objectives
-1. Generate a realistic synthetic dataset simulating UK agricultural soil and weather conditions.
-2. Train and validate a baseline ML model to predict nitrate/runoff risks.
-3. Build a FastAPI service exposing prediction endpoints.
-4. Develop a Streamlit dashboard for visualising alerts and soil compliance insights.
-
----
-
-## 🧩 System Architecture
-
-
+🧩 System architecture
 DATA → MODEL → API → DASHBOARD
 
-`
-| Layer | Description |
-|-------|--------------|
-| **Data Layer** | Synthetic datasets generated (soil, rainfall, NDVI, fertiliser, etc.) |
-| **Model Layer** | Histogram-Based Gradient Boosting Classifier (scikit-learn) trained on engineered features |
-| **API Layer** | FastAPI REST API (`/score`) serving Alert Cards with risk explanations |
-| **Dashboard Layer** | Streamlit interface showing per-field risk indicators (Green / Amber / Red) |
-`
----
+Layer	Description
+Data Layer	Synthetic datasets (soil labs, rainfall, NDVI, fertiliser logs).
+Model Layer	Histogram-Based Gradient Boosting Classifier (scikit-learn) on engineered features.
+API Layer	FastAPI REST endpoint /score serving Alert Cards with risk explanations.
+Dashboard Layer	Streamlit UI showing per-field risk indicators (Green / Amber / Red) + drivers.
 
-## 🧠 Model Performance (Synthetic Dataset)
-`
-| Metric | Result |
-|---------|--------|
-| **AUC** | 0.998 |
-| **Accuracy** | 0.995 |
-| **Precision / Recall / F1** | 0.667 / 0.667 / 0.667 |
-`
+🧠 Model performance (synthetic dataset)
+Metric	Result
+AUC	0.998
+Accuracy	0.995
+Precision / Recall / F1	0.667 / 0.667 / 0.667
+
 These indicate strong predictive potential and a stable synthetic training environment.
 
----
-
-## ⚙️ Project Structure
-
-`
+⚙️ Project structure
+bash
+Copy code
 Agric-SoilHealth-AI/
 │
-├── data/ # Synthetic dataset package
-├── outputs/ # Model, metrics, and plots
-├── screenshots/ # Dashboard + API images
-│ ├── alert_dashboard.png
-│ ├── fast_api1.png
-│ ├── fast_api2.png
-│ └── fast_api3.png
+├── data/                # Synthetic dataset package
+├── outputs/             # Trained model, metrics, and plots
+├── screenshots/         # Dashboard + API images
+│   ├── alert_dashboard.png
+│   ├── fast_api1.png
+│   ├── fast_api2.png
+│   └── fast_api3.png
 │
-├── generate_data.py # Step 1: Data generation
-├── train_model.py # Step 2: Model training
-├── serve_api.py # Step 3: FastAPI service
-├── dashboard.py # Step 4: Streamlit dashboard
-├── requirements.txt # Environment dependencies
+├── generate_data.py     # Step 1: Data generation
+├── train_model.py       # Step 2: Model training
+├── serve_api.py         # Step 3: FastAPI service
+├── dashboard.py         # Step 4: Streamlit dashboard
+├── requirements.txt     # Environment dependencies
 │
-├── Feasibility_Note_AI_Soil_Health.pdf
-└── Technical_Overview.pdf
-`
-
----
-
-## 🚀 How to Run Locally
-
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/<yourusername>/Agric-SoilHealth-AI.git
+├── docs/
+│   ├── Feasibility Note.pdf
+│   └── Technical Overview – System Architecture.pdf
+└── README.md
+🚀 Run it locally
+1) Clone & set up
+bash
+Copy code
+git clone https://github.com/ncvictorious/Agric-SoilHealth-AI.git
 cd Agric-SoilHealth-AI
-`
-
-2️⃣ Create a Virtual Environment
-`
-python -m venv .venv
-.\.venv\Scripts\activate
+python -m venv .venv && .\.venv\Scripts\activate
 pip install -r requirements.txt
-`
-3️⃣ Generate Data
-`
+2) Generate data & train model
+bash
+Copy code
 python generate_data.py
-`
-4️⃣ Train the Model
-`
 python train_model.py
-`
-5️⃣ Run API
-`
+3) Start the API
+bash
+Copy code
 uvicorn serve_api:app --reload --port 8000
-`
-
-Visit http://localhost:8000/docs
- to interact with the endpoint.
-
-6️⃣ Launch Dashboard
-`
+# Open http://localhost:8000/docs
+4) Launch the dashboard (new terminal)
+bash
+Copy code
 streamlit run dashboard.py
-`
+# Open http://localhost:8501
 🖼 Screenshots
-FastAPI Endpoint
+FastAPI – POST /score
 
 Alert Dashboard
 
-🔬 Technical Stack
-
-Python 3.11
-
-scikit-learn 1.5
-
-FastAPI 0.115
-
-Streamlit 1.38
-
-Pandas 2.2
-
-Uvicorn 0.30
-
 📘 Documentation
+[📄 Feasibility Note (PDF)](docs/Feasibility%20Note.pdf)
 
-## 📘 Documentation
-- 📄 [Feasibility Note (PDF)](./docs/Feasibility%20Note.pdf)
-- 📘 [Technical Overview (PDF)](./docs/Technical%20Overview%20–%20System%20Architecture.pdf)
+[📘 Technical Overview (PDF)](docs/Technical%20Overview.pdf)
 
+🔬 Tech stack
+Python 3.11 · scikit-learn 1.5 · FastAPI 0.115 · Streamlit 1.38 · Pandas 2.2 · Uvicorn 0.30
 
-📧 Contact
+📄 License
+./LICENSE.
 
-Author: Victor Nwaobi
-Organisation: Edora AI-Robotics Solutions Ltd
-
-
+🤝 Acknowledgements
+Prototype developed for the DEFRA Farming Innovation Programme (Feasibility Round 4) by Edora AI-Robotics Solutions Ltd.
