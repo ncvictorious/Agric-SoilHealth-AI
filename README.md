@@ -153,8 +153,24 @@ Uvicorn 0.30
 
 ## Contact
 
-### Author: Victor Nwaobi
+Victor Chibueze Nwaobi
+Lead Developer – Edora AI-Robotics Solutions Ltd
+GitHub: @ncvictorious
 
-### Organisation: Edora AI-Robotics Solutions Ltd
+## Acknowledgements
+
+This feasibility prototype was developed for the
+DEFRA Farming Innovation Programme (Feasibility Round 4)
+as part of the AI for Sustainability initiative.
+
+## Next Steps
+
+Integrate real-world farm data (soil sensors, drone NDVI)
+
+Retrain model for field variability and bias correction
+
+Align with DEFRA Digital Regulation Hub guidelines
+
+Conduct user testing with partner farms
 
 
