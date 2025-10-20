@@ -1,6 +1,6 @@
 
 
-# 🌱 AI-Driven Decision Support for Soil Health and Nutrient Management
+# AI-Driven Decision Support for Soil Health and Nutrient Management
 
 This repository contains the feasibility prototype developed for the **DEFRA Agriculture & Soil Health Project** (Edora AI-Robotics Solutions Ltd, 2025).  
 It demonstrates an **AI-driven pipeline** that predicts soil nutrient risks, visualises compliance alerts, and provides interpretable insights for farmers and regulators.
@@ -10,7 +10,7 @@ It demonstrates an **AI-driven pipeline** that predicts soil nutrient risks, vis
 ## Project Overview
 This project integrates **synthetic environmental datasets**, **machine learning models**, and **interactive dashboards** to assess soil health in near real-time.
 
-### 🎯 Objectives
+### Objectives
 1. Generate a realistic synthetic dataset simulating UK agricultural soil and weather conditions.
 2. Train and validate a baseline ML model to predict nitrate/runoff risks.
 3. Build a FastAPI service exposing prediction endpoints.
